@@ -12,8 +12,100 @@ body {
     width: 300px;
     height: 200px;
     bottom: 40px;
-    background-color: #ffb6c1;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    animation: Shake 5s infinite;
+    z-index: 10;
+    &>div{
+        background: #ffb6c1;
+        position: absolute;
+        &:after,&:before{
+          position: absolute;
+          content:"";
+          top: 0;
+        }
+    }
+    .box-cover {
+        width: 100%;
+        top: 0;
+        left: 0;
+        height:25%;
+        z-index:2;
+        &:before{
+            position: absolute;
+            height:100%;
+            left: 50%;
+            width:50px;  transform:translateX(-50%);
+            background:#fd6dbf;
+        }
+        &>div{
+            position: absolute;
+            width:50px;
+            height:50px;
+            left:50%;
+            top:-50px; transform:translateX(-50%);
+            &:before,&:after{
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              content:"";
+              box-shadow:inset 0 0 0 15px #fd6dbf;
+              border-radius:30px;
+              transform-origin:50% 100%;
+            }
+            &:before{
+              transform:translateX(-45%) skewY(40deg);
+            }
+            &:after{   transform:translateX(45%) skewY(-40deg);
+            }
+        }
+    }
+    .box {
+        right: 5%;
+        left: 5%;
+        height: 80%;
+        bottom: 0;
+        &:before{ 
+            width:50px;
+            height:100%;
+            left:50%;
+            transform:translateX(-50%);
+            background:#fd6dbf;
+        }
+        &:after {
+            width: 100%;
+            height: 30px;
+            background:rgba(0,0,0,0.2)
+        }
+    }
+}
+
+@keyframes Shake {
+    0% {transform: translateY(-30px);}
+    50% {transform: translateY(0px);}
+    100% {transform: translateY(-30px);}
+}
+
+@keyframes BlowUp {
+    0% {transform: scale(1, 1);}
+    25% {transform: scale(0.95, 1.05);}
+    50% {transform: scale(1.1, 0.9);}
+    75% {transform: scale(0.9, 1.1);}
+    100% {transform: scale(1, 1);}
+}
+
+@keyframes Wobble {
+    25% {transform: rotate(4deg);}
+    75% {transform: rotate(-2deg);}
+}
+
+@keyframes FlyUp {
+    75% {opacity: 1;}
+    100% {transform: translateY(-1000px); opacity: 0;}
+}
+
+@keyframes FlyDown {
+    75% {opacity: 1;}
+    100% {transform: translateY(100%); opacity: 0;}
 }
