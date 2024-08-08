@@ -81,6 +81,9 @@ body {
             background:rgba(0,0,0,0.2)
         }
     }
+    .stopped {
+        animation: none;
+    }
 }
 
 .step-1{
@@ -95,7 +98,7 @@ body {
 .step-2 .gift:after{
     opacity:0;
   }
-.step-3 .gift{
+.step-3 .gift, .step-4 .gift{
     z-index:1;
 }
 .step-2{
@@ -106,11 +109,23 @@ body {
     }
 }
 
-.step-3{
+.step-3, .step-4{
     .gift{
         .box-cover{
             opacity: 0;;
         }
+    }
+}
+
+.step-4 .gift .box {
+    .cakeSticker {
+        animation: CakeSticker 0.2s ease-in forwards;
+    }
+    .videoSticker {
+        animation: VideoSticker 0.2s ease-in forwards;
+    }
+    .cardSticker {
+        animation: CardSticker 0.2s ease-in forwards;
     }
 }
 
@@ -145,17 +160,17 @@ body {
 
 .banner {
     max-width: 100%;
-    transform: translate(0px, -1000px);
+    transform: translateY(-300%);
 }
 
 .banner-come {
-    animation: banner_come linear 5s;
-	transform:translate(0px,-500px);
+    animation: banner_come linear 4s;
+	transform:translateY(-100%);
 }
 
 @keyframes banner_come {
     0% {
-        transform: translate(0px, -1000px);
+        transform: translateY(-300%);
     }
     /* 33% {
         transform: translate(0px, -500px);
@@ -166,7 +181,94 @@ body {
 		transform: rotate(-10deg);
 	} */
 	100% {
-		transform: translate(0px,-500px);
+		transform: translateY(-100%);
+	}
+}
+
+#balloon-container {
+    position: absolute;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+    z-index: -1;
+}
+
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+}
+
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.cakeSticker, .videoSticker, .cardSticker {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    z-index: -1;
+}
+
+@keyframes Float {
+    from {transform: translateY(100vh); opacity: 1}
+    to {transform: translateY(-300vh); opacity: 0}
+}
+
+@keyframes CakeSticker {
+    0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-200px, -200px);
+	}
+}
+
+@keyframes VideoSticker {
+    0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(0, -200px);
+	}
+}
+
+@keyframes CardSticker {
+    0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(200px, -200px);
 	}
 }
 
