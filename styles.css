@@ -64,11 +64,12 @@ body {
         }
     }
     .box {
+
         right: 5%;
         left: 5%;
         height: 80%;
         bottom: 0;
-        &:before{ 
+        &:before{
             width:50px;
             height:100%;
             left:50%;
@@ -104,7 +105,7 @@ body {
 .step-2{
     .gift{
         .box-cover{
-            animation:FlyUp 0.4s ease-in forwards;
+            animation: FlyUp 0.4s ease-in forwards;
         }
     }
 }
@@ -117,7 +118,10 @@ body {
     }
 }
 
-.step-4 .gift .box {
+.step-4 .gift {
+    .box {
+        animation: FlyDown 0.2s ease-in 0.05s forwards;
+    }
     .cakeSticker {
         animation: CakeSticker 0.2s ease-in forwards;
     }
@@ -150,7 +154,7 @@ body {
 
 @keyframes FlyUp {
     75% {opacity: 1;}
-    100% {transform: translateY(-1000px); opacity: 0;}
+    100% {transform: translateY(-1000px) rotate(20deg); opacity: 0;}
 }
 
 @keyframes FlyDown {
@@ -232,8 +236,9 @@ body {
 
 .cakeSticker, .videoSticker, .cardSticker {
     position: absolute;
-    width: 50%;
-    left: 25%;
+    width: 40%;
+    left: 30%;
+    bottom: 10%;
     z-index: -1;
 }
 
@@ -248,7 +253,7 @@ body {
 	}
 
 	100% {
-		transform: translate(-200px, -200px);
+		transform: translate(-200px, -100px);
 	}
 }
 
@@ -258,7 +263,7 @@ body {
 	}
 
 	100% {
-		transform: translate(0, -200px);
+		transform: translate(0, -100px);
 	}
 }
 
@@ -268,7 +273,7 @@ body {
 	}
 
 	100% {
-		transform: translate(200px, -200px);
+		transform: translate(200px, -100px);
 	}
 }
 

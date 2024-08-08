@@ -59,7 +59,7 @@ window.onload = function() {
         confetti({
             particleCount: 200,
             spread: 70,
-            origin: { y: 0.87 }
+            origin: { y: 0.8 }
         })
     }
 
