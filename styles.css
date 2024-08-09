@@ -6,7 +6,7 @@ body {
   background-color: #f0e6f6;
   margin: 0;
 }
-
+/* Hộp quà */
 .gift {
   position: absolute;
   width: 300px;
@@ -86,11 +86,9 @@ body {
       background: rgba(0, 0, 0, 0.2);
     }
   }
-  .stopped {
-    animation: none;
-  }
 }
 
+/* Tính năng mở hộp quà */
 .step-1 {
   .gift {
     animation: Wobble 0.5s linear infinite forwards;
@@ -100,19 +98,20 @@ body {
   }
 }
 
-.step-2 .gift:after {
-  opacity: 0;
-}
-.step-3 .gift,
-.step-4 .gift {
-  z-index: 1;
-}
 .step-2 {
   .gift {
     .box-cover {
       animation: FlyUp 0.4s ease-in forwards;
     }
   }
+}
+.step-2 .gift:after {
+  opacity: 0;
+}
+
+.step-3 .gift,
+.step-4 .gift {
+  z-index: 1;
 }
 
 .step-3,
@@ -126,7 +125,7 @@ body {
 
 .step-4 .gift {
   .box {
-    animation: FlyDown 0.2s ease-in 0.05s forwards;
+    animation: FlyDown 0.2s ease-in forwards;
   }
   .cakeSticker {
     animation: CakeSticker 0.2s ease-in forwards;
@@ -139,6 +138,8 @@ body {
   }
 }
 
+/* Animation của hộp quà */
+/* Lắc hộp quà */
 @keyframes Shake {
   0% {
     transform: translateY(-30px);
@@ -151,7 +152,43 @@ body {
   }
 }
 
-@keyframes BlowUp {
+@-moz-keyframes Shake {
+    0% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+@-o-keyframes Shake {
+    0% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+@-webkit-keyframes Shake {
+    0% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+/* @keyframes BlowUp {
   0% {
     transform: scale(1, 1);
   }
@@ -167,8 +204,9 @@ body {
   100% {
     transform: scale(1, 1);
   }
-}
+} */
 
+/* Hộp quà chuẩn bị bung */
 @keyframes Wobble {
   25% {
     transform: rotate(4deg);
@@ -178,6 +216,7 @@ body {
   }
 }
 
+/* Mở nắp hộp quà */
 @keyframes FlyUp {
   75% {
     opacity: 1;
@@ -188,6 +227,7 @@ body {
   }
 }
 
+/* Bỏ hộp sau khi mở hết quà */
 @keyframes FlyDown {
   75% {
     opacity: 1;
@@ -198,6 +238,7 @@ body {
   }
 }
 
+/* Ruy băng */
 .banner {
   max-width: 100%;
   transform: translateY(-300%);
@@ -205,7 +246,7 @@ body {
 
 .banner-come {
   animation: banner_come linear 4s;
-  transform: translateY(-100%);
+  transform: translateY(-150%);
 }
 
 @keyframes banner_come {
@@ -221,10 +262,11 @@ body {
 		transform: rotate(-10deg);
 	} */
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-150%);
   }
 }
 
+/* Bóng bay */
 #balloon-container {
   position: absolute;
   height: 100%;
@@ -270,6 +312,19 @@ body {
   margin: auto;
 }
 
+
+@keyframes Float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-300vh);
+        opacity: 0;
+    }
+}
+
+/* 3 món quà */
 .cakeSticker,
 .videoSticker,
 .cardSticker {
@@ -278,17 +333,6 @@ body {
   left: 30%;
   bottom: 10%;
   z-index: -1;
-}
-
-@keyframes Float {
-  from {
-    transform: translateY(100vh);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-300vh);
-    opacity: 0;
-  }
 }
 
 @keyframes CakeSticker {
@@ -321,6 +365,7 @@ body {
   }
 }
 
+/* Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -354,6 +399,7 @@ body {
   cursor: pointer;
 }
 
+/* Thiệp sinh nhật */
 .card {
   width: 640px;
   height: 400px;
@@ -486,6 +532,7 @@ body {
   line-height: 120px;
 }
 
+/* Bánh sinh nhật */
 #birthday-cake {
   position: relative;
   top: 50px;

@@ -8,46 +8,24 @@
 </head>
 <body>
     <div id="merrywrap" class="merrywrap">
+        <!-- Ruy băng -->
         <img src="banner.png" class="banner">
+        <!-- Hộp quà chính -->
         <div class="gift">
             <div class="box-cover">
                 <div></div>
             </div>
             <div class="box">
             </div>
-            <img src="happy-birthday.png" class="cakeSticker" onclick="openCakeModal()">
-            <img src="clapperboard.png" class="videoSticker" onclick="openVideoModal()">
-            <img src="cat.png" class="cardSticker" onclick="openCardModal()">
+            <!-- 3 món quà-->
+            <img src="birthdaycake.png" class="cakeSticker" onclick="openCakeModal()">
+            <img src="videoplayer.png" class="videoSticker" onclick="openVideoModal()">
+            <img src="birthdaycard.png" class="cardSticker" onclick="openCardModal()">
         </div>
     </div>
+    <!-- Bóng bay -->
     <div id="balloon-container"></div>
-    <div id="cardModal" class="modal">
-        <span class="close" onclick="closeCardModal()">&times;</span>
-        <div class="card">
-            <div class="outside">
-              <div class="front">
-                <p>Happy Birthday</p>
-                <div class="cake-card">
-                  <div class="top-layer"></div>
-                  <div class="middle-layer"></div>
-                  <div class="bottom-layer"></div>
-                  <div class="candle-card"></div>
-                </div>
-              </div>
-              <div class="back"></div>
-            </div>
-            <div class="inside">
-              <p>Wishing you a very happy birthday filled with love and laughter</p>
-              <h1>&#127873;</h1>
-            </div>
-        </div>
-    </div>
-    <div id="videoModal" class="modal">
-        <span class="close" onclick="closeVideoModal()">&times;</span>
-        <video id="videoPlayer" width="50%" height="auto" controls>
-            <source src="QueenGarden.mp4" type="video/mp4">
-        </video>
-    </div>
+    <!-- Bánh sinh nhật -->
     <div id="cakeModal" class="modal">
         <span class="close" onclick="closeCakeModal()">&times;</span>
         <div id="birthday-cake">
@@ -64,6 +42,35 @@
                 <div class="shadows"></div>
             </div>
             <p class="text2">*click on the flame to blow candles</p>
+        </div>
+    </div>
+    <!-- Video -->
+    <div id="videoModal" class="modal">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <video id="videoPlayer" width="50%" height="auto" controls>
+            <source src="QueenGarden.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- Thiệp -->
+    <div id="cardModal" class="modal">
+        <span class="close" onclick="closeCardModal()">&times;</span>
+        <div class="card">
+            <div class="outside">
+                <div class="front">
+                <p>Happy Birthday</p>
+                <div class="cake-card">
+                    <div class="top-layer"></div>
+                    <div class="middle-layer"></div>
+                    <div class="bottom-layer"></div>
+                    <div class="candle-card"></div>
+                </div>
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="inside">
+                <p>Wishing you a very happy birthday filled with love and laughter</p>
+                <h1>&#127873;</h1>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
