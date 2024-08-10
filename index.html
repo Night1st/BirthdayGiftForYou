@@ -57,7 +57,7 @@
         <div class="card">
             <div class="outside">
                 <div class="front">
-                <p>Happy Birthday</p>
+                <p class="text3">Happy Birthday!</p>
                 <div class="cake-card">
                     <div class="top-layer"></div>
                     <div class="middle-layer"></div>
@@ -101,7 +101,17 @@
         function closeCakeModal() {
             cakeModal.style.display = "none"
         }
-
+        window.onclick = function(event) {
+            if (event.target == cardModal) {
+                cardModal.style.display = "none"
+            }
+            else if (event.target == videoModal) {
+                videoModal.style.display = "none"
+            }
+            else if (event.target == cakeModal) {
+                cakeModal.style.display = "none"
+            }
+        }
     </script>
 </body>
 </html>

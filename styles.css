@@ -241,17 +241,17 @@ body {
 /* Ruy băng */
 .banner {
   max-width: 100%;
-  transform: translateY(-300%);
+  transform: translateY(-400%);
 }
 
 .banner-come {
   animation: banner_come linear 4s;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
 }
 
 @keyframes banner_come {
   0% {
-    transform: translateY(-300%);
+    transform: translateY(-400%);
   }
   /* 33% {
         transform: translate(0px, -500px);
@@ -262,7 +262,7 @@ body {
 		transform: rotate(-10deg);
 	} */
   100% {
-    transform: translateY(-150%);
+    transform: translateY(-200%);
   }
 }
 
@@ -341,7 +341,7 @@ body {
   }
 
   100% {
-    transform: translate(-200px, -100px);
+    transform: translate(-150px, -100px);
   }
 }
 
@@ -361,7 +361,7 @@ body {
   }
 
   100% {
-    transform: translate(200px, -100px);
+    transform: translate(150px, -100px);
   }
 }
 
@@ -405,7 +405,7 @@ body {
   height: 400px;
   position: absolute;
   margin: auto;
-  left: 0;
+  left: -50px;
   right: 0;
   top: 0;
   bottom: 0;
@@ -413,6 +413,19 @@ body {
   perspective: 1200px;
   transition: 1s;
 }
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 480px;
+  }
+}
+
 .card:hover {
   transform: rotate(-5deg);
 }
@@ -492,6 +505,7 @@ body {
   transform: scale(0.7);
   top: 26px;
 }
+
 .candle-card {
   height: 45px;
   width: 15px;
@@ -501,12 +515,34 @@ body {
     #fd3018 5px,
     #ffa89e 5px,
     #ffa89e 10px
-  );
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 202px;
+    );
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+}
+
+@media screen and (max-width: 768px) {
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    width: 200px;
+  }
+  .bottom-layer {
+    transform: scale(0.85);
+  }
+  .middle-layer {
+    transform: scale(0.7);
+    top: 18px;
+  }
+  .top-layer {
+    transform: scale(0.55);
+    top: 48px;
+  }
+  .candle-card {
+    bottom: 174px;
+  }
 }
 .candle:before {
   content: "";
@@ -521,10 +557,9 @@ body {
 }
 .outside p {
   font-size: 23px;
-  text-transform: uppercase;
   margin-top: 30px;
   text-align: center;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   color: #000046;
 }
 .inside h1 {
