@@ -5,6 +5,7 @@ body {
   height: 100vh;
   background-color: #f0e6f6;
   margin: 0;
+  overflow: hidden;
 }
 /* Hộp quà */
 .gift {
@@ -125,7 +126,7 @@ body {
 
 .step-4 .gift {
   .box {
-    animation: FlyDown 0.2s ease-in forwards;
+    animation: FlyDown 0.2s ease-in 0.05s forwards;
   }
   .cakeSticker {
     animation: CakeSticker 0.2s ease-in forwards;
@@ -246,7 +247,7 @@ body {
 
 .banner-come {
   animation: banner_come linear 4s;
-  transform: translateY(-200%);
+  transform: translateY(-180%);
 }
 
 @keyframes banner_come {
@@ -262,7 +263,7 @@ body {
 		transform: rotate(-10deg);
 	} */
   100% {
-    transform: translateY(-200%);
+    transform: translateY(-180%);
   }
 }
 

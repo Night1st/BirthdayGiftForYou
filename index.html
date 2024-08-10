@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Gift</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div id="merrywrap" class="merrywrap">
@@ -27,7 +28,6 @@
     <div id="balloon-container"></div>
     <!-- Bánh sinh nhật -->
     <div id="cakeModal" class="modal">
-        <span class="close" onclick="closeCakeModal()">&times;</span>
         <div id="birthday-cake">
             <div class="cake">
                 <div class="middle"></div>
@@ -46,18 +46,17 @@
     </div>
     <!-- Video -->
     <div id="videoModal" class="modal">
-        <span class="close" onclick="closeVideoModal()">&times;</span>
         <video id="videoPlayer" width="50%" height="auto" controls>
             <source src="QueenGarden.mp4" type="video/mp4">
         </video>
     </div>
     <!-- Thiệp -->
     <div id="cardModal" class="modal">
-        <span class="close" onclick="closeCardModal()">&times;</span>
+
         <div class="card">
             <div class="outside">
                 <div class="front">
-                <p class="text3">Happy Birthday!</p>
+                <p>Happy Birthday!</p>
                 <div class="cake-card">
                     <div class="top-layer"></div>
                     <div class="middle-layer"></div>
@@ -76,6 +75,16 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
+        $(document).ready(function() {
+            $(".candles").click(function() {
+                
+            $(".flame").animate({"opacity": 0}, "fast");
+            $(".flame2").animate({"opacity": 0}, "fast");
+            $(".flame3").animate({"opacity": 0}, "fast");
+            $(".text").animate({"top": -90, "opacity": 1}, "fast");
+            });
+        });
+
         var cardModal = document.getElementById("cardModal")
         var videoModal = document.getElementById("videoModal")
         var cakeModal = document.getElementById("cakeModal")
@@ -83,23 +92,12 @@
         function openCardModal() {
             cardModal.style.display = "block"
         }
-        function closeCardModal() {
-            cardModal.style.display = "none"
-        }
         function openVideoModal() {
             videoModal.style.display = "flex"
             video.play()
         }
-        function closeVideoModal() {
-            videoModal.style.display = "none"
-            video.pause()
-            video.currentTime = 0
-        }
         function openCakeModal() {
             cakeModal.style.display = "flex"
-        }
-        function closeCakeModal() {
-            cakeModal.style.display = "none"
         }
         window.onclick = function(event) {
             if (event.target == cardModal) {
@@ -107,6 +105,8 @@
             }
             else if (event.target == videoModal) {
                 videoModal.style.display = "none"
+                video.pause()
+                video.currentTime = 0
             }
             else if (event.target == cakeModal) {
                 cakeModal.style.display = "none"
