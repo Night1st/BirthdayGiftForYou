@@ -6,6 +6,7 @@ body {
   background-color: #f0e6f6;
   margin: 0;
   overflow: hidden;
+  
 }
 /* Hộp quà */
 .gift {
@@ -16,7 +17,7 @@ body {
   margin-left: -150px;
   bottom: 40px;
   border-radius: 10px;
-  animation: Shake 5s infinite;
+  /* animation: Shake 5s infinite; */
   z-index: 10;
   & > div {
     background: #ffb6c1;
@@ -217,6 +218,33 @@ body {
   }
 }
 
+@-moz-keyframes Wobble {
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@-o-keyframes Wobble {
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@-webkit-keyframes Wobble {
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
 /* Mở nắp hộp quà */
 @keyframes FlyUp {
   75% {
@@ -228,8 +256,68 @@ body {
   }
 }
 
+@-moz-keyframes FlyUp {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes FlyUp {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes FlyUp {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
 /* Bỏ hộp sau khi mở hết quà */
 @keyframes FlyDown {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes FlyDown {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes FlyDown {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes FlyDown {
   75% {
     opacity: 1;
   }
@@ -254,14 +342,33 @@ body {
   0% {
     transform: translateY(-400%);
   }
-  /* 33% {
-        transform: translate(0px, -500px);
-        transform: rotate(10deg);
-    }
-    66% {
-		transform: translate(0px,-500px);
-		transform: rotate(-10deg);
-	} */
+  100% {
+    transform: translateY(-180%);
+  }
+}
+
+@-moz-keyframes banner_come {
+  0% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(-180%);
+  }
+}
+
+@-o-keyframes banner_come {
+  0% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(-180%);
+  }
+}
+
+@-webkit-keyframes banner_come {
+  0% {
+    transform: translateY(-400%);
+  }
   100% {
     transform: translateY(-180%);
   }
@@ -325,6 +432,39 @@ body {
     }
 }
 
+@-moz-keyframes Float {
+  from {
+      transform: translateY(100vh);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(-300vh);
+      opacity: 0;
+  }
+}
+
+@-o-keyframes Float {
+  from {
+      transform: translateY(100vh);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(-300vh);
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes Float {
+  from {
+      transform: translateY(100vh);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(-300vh);
+      opacity: 0;
+  }
+}
+
 /* 3 món quà */
 .cakeSticker,
 .videoSticker,
@@ -346,6 +486,36 @@ body {
   }
 }
 
+@-moz-keyframes CakeSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-150px, -100px);
+  }
+}
+
+@-o-keyframes CakeSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-150px, -100px);
+  }
+}
+
+@-webkit-keyframes CakeSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-150px, -100px);
+  }
+}
+
 @keyframes VideoSticker {
   0% {
     transform: translate(0, 0);
@@ -356,7 +526,67 @@ body {
   }
 }
 
+@-moz-keyframes VideoSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -100px);
+  }
+}
+
+@-o-keyframes VideoSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -100px);
+  }
+}
+
+@-webkit-keyframes VideoSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -100px);
+  }
+}
+
 @keyframes CardSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(150px, -100px);
+  }
+}
+
+@-moz-keyframes CardSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(150px, -100px);
+  }
+}
+
+@-o-keyframes CardSticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(150px, -100px);
+  }
+}
+
+@-webkit-keyframes CardSticker {
   0% {
     transform: translate(0, 0);
   }
@@ -380,24 +610,54 @@ body {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   justify-content: center;
   align-items: center;
+  animation-name: fadeIn; /* Name of the animation */
+  animation-duration: 0.5s; /* Duration of the animation */
 }
 
 .modal-content {
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Fade in animation for modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Popup animation for modal content */
+@keyframes popup {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@-moz-keyframes popup {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@-o-keyframes popup {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@-webkit-keyframes popup {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* Thiệp sinh nhật */
@@ -638,7 +898,7 @@ body {
 
 .top {
   position: absolute;
-  background-color: #7f5539;
+  background-color: #FFC0CB;
   width: 350px;
   height: 90px;
   border-radius: 50%;
@@ -651,12 +911,12 @@ body {
   position: absolute;
   width: 55px;
   height: 50px;
-  background-color: #7f5539;
+  background-color: #FFC0CB;
   top: 0;
   z-index: 1;
   border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
-  box-shadow: 49px 20px #7f5539, 98px 25px #7f5539, 147px 30px #7f5539,
-    196px 25px #7f5539, 245px 20px #7f5539, 295px 0 #7f5539, 0px 4px #fff,
+  box-shadow: 49px 20px #FFC0CB, 98px 25px #FFC0CB, 147px 30px #FFC0CB,
+    196px 25px #FFC0CB, 245px 20px #FFC0CB, 295px 0 #FFC0CB, 0px 4px #fff,
     49px 24px #fff, 98px 29px #fff, 147px 34px #fff, 196px 29px #fff,
     245px 24px #fff, 295px 4px #fff;
 }
@@ -704,6 +964,7 @@ body {
   left: 50px;
   box-shadow: inset 2px -1px #fff;
 }
+
 
 .shadows {
   position: absolute;
@@ -801,6 +1062,42 @@ body {
   }
 }
 
+@-moz-keyframes flame {
+  0%,
+  25%,
+  100% {
+    transform: scaleY(1) rotate(-45deg);
+  }
+  50%,
+  75% {
+    transform: scaleY(1.1) rotate(-45deg);
+  }
+}
+
+@-o-keyframes flame {
+  0%,
+  25%,
+  100% {
+    transform: scaleY(1) rotate(-45deg);
+  }
+  50%,
+  75% {
+    transform: scaleY(1.1) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes flame {
+  0%,
+  25%,
+  100% {
+    transform: scaleY(1) rotate(-45deg);
+  }
+  50%,
+  75% {
+    transform: scaleY(1.1) rotate(-45deg);
+  }
+}
+
 .text,
 .text2 {
   position: absolute;
@@ -824,42 +1121,3 @@ body {
   top: 105px;
   left: -140px;
 }
-
-/* .banner {
-	max-width: 100%;
-	-webkit-transform:translate(0px,-500px);
-	-moz-transform:translate(0px,-500px);
-	-o-transform:translate(0px,-500px);
-	-ms-transform:translate(0px,-500px);
-	transform:translate(0px,-500px);
-
-}
-.banner-come {
-	-webkit-animation: banner_come linear 6s;
-	-webkit-transform:translate(0px,0px);
-	-moz-animation: banner_come linear 6s;
-	-moz-transform:translate(0px,0px);
-	-o-animation: banner_come linear 6s;
-	-o-transform:translate(0px,0px);
-	-ms-animation: banner_come linear 6s;
-	-ms-transform:translate(0px,0px);
-	animation: banner_come linear 6s;
-	transform:translate(0px,0px);
-}
-@-webkit-keyframes banner_come {
-	0%{
-		-webkit-transform:translate(0px,-1000px);
-	}
-	33%{
-		-webkit-transform:translate(0px,0px);
-		-webkit-transform:rotate(10deg);
-		-webkit-transform:scale(1.5);
-	}
-	66% {
-		-webkit-transform:translate(0px,100px);
-		-webkit-transform:rotate(-10deg);
-	}
-	100% {
-		-webkit-transform:translate(0px,0px);
-	}
-} */
