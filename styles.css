@@ -1,11 +1,14 @@
+html, body {
+ overflow: hidden;
+}
+
 body {
   display: flex;
   justify-content: center;
   height: 100vh;
   background-color: #f0e6f6;
   margin: 0;
-  overflow: hidden;
-  
+  position: relative;
 }
 /* Hộp quà */
 .gift {
@@ -334,7 +337,7 @@ body {
 
 .banner-come {
   animation: banner_come linear 4s;
-  transform: translateY(50%);
+  transform: translateY(0%);
 }
 
 @keyframes banner_come {
@@ -342,7 +345,7 @@ body {
     transform: translateY(-200%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(0%);
   }
 }
 
@@ -351,7 +354,7 @@ body {
     transform: translateY(-200%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(0%);
   }
 }
 
@@ -360,7 +363,7 @@ body {
     transform: translateY(-200%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(0%);
   }
 }
 
@@ -369,7 +372,7 @@ body {
     transform: translateY(-200%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(0%);
   }
 }
 
