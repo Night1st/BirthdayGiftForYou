@@ -69,7 +69,6 @@ window.onload = function() {
           balloon.className = "balloon";
           balloon.style.cssText = getRandomStyle();
           balloonContainer.append(balloon);
-          console.log(balloonContainer)
         }
     }
 

@@ -1,7 +1,6 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #f0e6f6;
   margin: 0;
@@ -330,47 +329,47 @@ body {
 /* Ruy băng */
 .banner {
   max-width: 100%;
-  transform: translateY(-400%);
+  transform: translateY(-200%);
 }
 
 .banner-come {
   animation: banner_come linear 4s;
-  transform: translateY(-180%);
+  transform: translateY(50%);
 }
 
 @keyframes banner_come {
   0% {
-    transform: translateY(-400%);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateY(-180%);
+    transform: translateY(50%);
   }
 }
 
 @-moz-keyframes banner_come {
   0% {
-    transform: translateY(-400%);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateY(-180%);
+    transform: translateY(50%);
   }
 }
 
 @-o-keyframes banner_come {
   0% {
-    transform: translateY(-400%);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateY(-180%);
+    transform: translateY(50%);
   }
 }
 
 @-webkit-keyframes banner_come {
   0% {
-    transform: translateY(-400%);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateY(-180%);
+    transform: translateY(50%);
   }
 }
 
@@ -687,12 +686,6 @@ body {
   }
 }
 
-.card:hover {
-  transform: rotate(-5deg);
-}
-.card:hover .outside {
-  transform: rotateY(-130deg);
-}
 .outside,
 .inside {
   height: 100%;

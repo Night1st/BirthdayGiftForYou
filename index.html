@@ -54,7 +54,7 @@
     <div id="cardModal" class="modal">
 
         <div class="card">
-            <div class="outside">
+            <div class="outside" onclick="openCard()">
                 <div class="front">
                 <p>Happy Birthday!</p>
                 <div class="cake-card">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="back"></div>
             </div>
-            <div class="inside">
+            <div class="inside" onclick="closeCard()">
                 <p>Wishing you a very happy birthday filled with love and laughter</p>
                 <h1>&#127873;</h1>
             </div>
@@ -89,6 +89,18 @@
         var videoModal = document.getElementById("videoModal")
         var cakeModal = document.getElementById("cakeModal")
         var video = document.getElementById("videoPlayer")
+
+        var card = cardModal.getElementsByClassName("card")[0]
+        var cardOutside = card.getElementsByClassName("outside")[0]
+
+        function openCard() {
+            card.style.transform = "rotate(-5deg)"
+            cardOutside.style.transform = "rotateY(-130deg)"
+        }
+        function closeCard() {
+            card.style.transform = "rotate(0deg)"
+            cardOutside.style.transform = "rotateY(0deg)"
+        }
         function openCardModal() {
             cardModal.style.display = "block"
         }
