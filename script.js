@@ -59,7 +59,7 @@ window.onload = function() {
         confetti({
             particleCount: 200,
             spread: 70,
-            origin: { y: 0.8 }
+            origin: { y: 0.9 }
         })
     }
 
@@ -80,6 +80,7 @@ window.onload = function() {
         stepClass(step)
         if (step == 2) {
             fireConfetti()
+            document.querySelector(".merrywrap").style.backgroundColor = 'transparent'
             banner.classList.add('banner-come')
         }
         if (step == 3) {

@@ -6,10 +6,23 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-color: #f0e6f6;
   margin: 0;
   position: relative;
+  background-image: linear-gradient( to bottom, #190e14 ,#0d0d4b 30%, #c76075 80%, #e9b64b 95% );
+  background-image:
+    radial-gradient(circle at center bottom, #e9b64b ,#c76075 15%, #0d0d4b 75%, #190e14 90%);
 }
+
+.merrywrap{
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  background-color: #f0e6f6;
+  transition: background-color .5s ease;
+}
+
 /* Hộp quà */
 .gift {
   position: absolute;
@@ -331,6 +344,11 @@ body {
 
 /* Ruy băng */
 .banner {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  left: 50%;
+  margin-left: -150px;
   max-width: 100%;
   transform: translateY(-200%);
 }
@@ -778,6 +796,18 @@ body {
     left: 0;
     right: 0;
     bottom: 202px;
+}
+
+.candle-card:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: #ffa500;
+  border-radius: 0 50% 50% 50%;
+  bottom: 48px;
+  transform: rotate(45deg);
+  left: -1px;
 }
 
 @media screen and (max-width: 768px) {
